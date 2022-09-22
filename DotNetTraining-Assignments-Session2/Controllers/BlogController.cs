@@ -23,14 +23,14 @@ namespace DotNetTraining_Assignments_Session2.Controllers
             var person = new Person()
             {
                 Id = 1,
-                Name = "Rakesh Lad",
+                FirstName = "Rakesh Lad",
                 Age = 37
             };
 
             var section = _config.GetSection("Logging:LogLevel");
             var value = section.GetValue<string>("Default");
            
-            person.Name= value;
+            person.FirstName= value;
 
             return View(person);
         }
