@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetTraining-Assignments-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetTraining-Assignments-Session2", "DotNetTraining-Assignments-Session2\DotNetTraining-Assignments-Session2.csproj", "{57B51094-362B-47FD-B8D8-3B0D6535169B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTraining-Assignments2", "DotNetTraining-Assignments2\DotNetTraining-Assignments2.csproj", "{EB3655C3-632D-483A-92B8-1183C64F2B98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetTraining-Assignments2", "DotNetTraining-Assignments2\DotNetTraining-Assignments2.csproj", "{EB3655C3-632D-483A-92B8-1183C64F2B98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTraining-Assignments3", "DotNetTraining-Assignments3\DotNetTraining-Assignments3.csproj", "{0D0801E6-E815-4089-A385-059C06D32EEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EB3655C3-632D-483A-92B8-1183C64F2B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB3655C3-632D-483A-92B8-1183C64F2B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB3655C3-632D-483A-92B8-1183C64F2B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0801E6-E815-4089-A385-059C06D32EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0801E6-E815-4089-A385-059C06D32EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0801E6-E815-4089-A385-059C06D32EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0801E6-E815-4089-A385-059C06D32EEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
