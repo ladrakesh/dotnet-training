@@ -19,10 +19,10 @@ namespace DotNetTraining_Assignments4.Features.ProductFeatures.Queries
 
             public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
             {
-                var user = _context.Products.Where(a => a.ProductId == request.ProductId).FirstOrDefault();
-                if (user == null) return new Product();
+                var product = _context.Products.Where(a => a.ProductId == request.ProductId).FirstOrDefault();
+                if (product == null) return new Product();
 
-                return user;
+                return product;
             }
         }
     }

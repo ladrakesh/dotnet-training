@@ -1,11 +1,12 @@
 ﻿using DotNetTraining_Assignments4.DbContexts;
 using DotNetTraining_Assignments4.Models;
+using DotNetTraining_Assignments4.Models.Dtos;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNetTraining_Assignments4.Features.ProductFeatures.Commands
 {
-    public class UpdateProductCommand :Product, IRequest<int>
+    public class UpdateProductCommand :ProductDto, IRequest<int>
     {
         public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, int>
         {

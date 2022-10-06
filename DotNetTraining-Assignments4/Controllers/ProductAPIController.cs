@@ -1,4 +1,5 @@
-﻿using DotNetTraining_Assignments4.Features.ProductFeatures.Commands;
+﻿using DotNetTraining_Assignments4.Features.CategoryFeatures.Queries;
+using DotNetTraining_Assignments4.Features.ProductFeatures.Commands;
 using DotNetTraining_Assignments4.Features.ProductFeatures.Queries;
 using DotNetTraining_Assignments4.Models;
 using DotNetTraining_Assignments4.Models.Dtos;
@@ -59,12 +60,22 @@ namespace DotNetTraining_Assignments4.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseDto> Post([FromBody] CreateProductCommand command)
+        public async Task<ResponseDto> Post(CreateProductCommand command)
         {
             try
             {
-                var result = await Mediator.Send(command);
-                _response.IsSuccess = result > 0;
+                int categoryId = await Mediator.Send(new GetCategoryIdByNameQuery { CategoryName = command.Category });
+                if (categoryId > 0)
+                {
+                    command.CategoryId = categoryId;
+                    var result = await Mediator.Send(command);
+                    _response.IsSuccess = result > 0;
+                }
+                else
+                {
+                    _response.IsSuccess = false;
+                    _response.ErrorMessages = new List<string>() {"Incorrect Category name"};
+                }
             }
             catch (Exception ex)
             {

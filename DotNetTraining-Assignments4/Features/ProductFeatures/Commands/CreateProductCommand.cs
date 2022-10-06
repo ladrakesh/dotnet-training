@@ -5,7 +5,7 @@ using MediatR;
 
 namespace DotNetTraining_Assignments4.Features.ProductFeatures.Commands
 {
-    public class CreateProductCommand : Product, IRequest<int>
+    public class CreateProductCommand : ProductDto, IRequest<int>
     {
         public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
         {
